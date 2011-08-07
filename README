@@ -1,0 +1,14 @@
+A crontab access locker
+https://github.com/McBugFix/upAccessLocker
+@author Uli Pahlke <github@matrix-tools.de>
+@link http://www.matrix-tools.de
+@version 0.1
+
+Usage
+$al = new AccessLocker();
+if ($al->setAccessLocker('process1') == false) {
+    exit('Process is running already...');
+} else {
+    // do something...
+    $al->freeAccessLocker();
+}
